@@ -18,5 +18,7 @@ public with sharing class OpportunityApplyDiscountJob implements Database.Batcha
             // Email error, log error, chatter error etc..
         }
     }
-    public void finish(Database.BatchableContext ctx) { }    
+    public void finish(Database.BatchableContext ctx) { }
+
+    //URL :: https://trailhead.salesforce.com/content/learn/modules/apex_patterns_sl/apex_patterns_sl_learn_sl_principles
 }
