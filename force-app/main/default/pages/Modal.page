@@ -1,0 +1,41 @@
+<apex:page lightningStylesheets="true" sidebar="false" standardController="Account" extensions="modalApex">
+    <apex:slds />
+    <div class="slds-brand-band slds-brand-band_medium slds-brand-band_user"></div>
+    <div class="slds-modal_large">
+        <div class="slds-modal__container">
+                
+            <header class="slds-modal__header slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                    <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h1 class="slds-text-heading_medium slds-page-header__title slds-truncate slds-align-middle">Quote Creation Process</h1>
+                            </div>
+                    </div>
+            </header>
+            <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" role="progressbar">
+                    <span class="slds-progress-bar__value" style="width:10%">
+                    <span class="slds-assistive-text">Progress: 50%</span>
+                    </span>
+            </div>
+            <div class="slds-modal__content slds-app-launcher__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-section slds-is-open">
+                       
+                        <c:quoteDetails textValue="{!quoteText}" />
+                        <c:productSelection textValue="{!productText}"/>
+
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="slds-docked-form-footer">
+            <button type="button" class="slds-button slds-button_neutral"> Previous </button>
+            <button type="button" class="slds-button slds-button_brand"> Save And Next </button>
+    </div>
+   
+</apex:page>

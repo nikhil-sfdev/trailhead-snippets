@@ -1,0 +1,15 @@
+<apex:page lightningStylesheets="true" standardController="Account">
+<apex:outputPanel style="padding-left: 3em;"  >
+    <div class="menuButton" id="Actions"><apex:outputPanel layout="none">
+        <div class="menuButtonButton" id="ActionsButton"><span class="menuButtonLabel" id="ActionsLabel">Actions</span></div>
+
+        <div class="menuButtonMenu" id="ActionsMenu"><apex:outputPanel layout="none">
+            <apex:outputLink value="#">Menu Link #1</apex:outputLink><br/>
+            <apex:outputLink value="#">Menu Link #2</apex:outputLink><br/>
+            <apex:outputLink value="#">Menu Link #3</apex:outputLink>
+        </apex:outputPanel></div>
+    </apex:outputPanel></div>
+</apex:outputPanel>
+
+<script type="text/javascript">new MenuButton('Actions', false);</script>
+</apex:page>

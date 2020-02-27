@@ -1,0 +1,12 @@
+<apex:page controller="WizardDemoController" docType="html-5.0">
+    <apex:form >
+    	<apex:pageBlock >
+            <c:wizardPage1 pageController="{!self}" rendered="{!pageNumber=1}" />
+            <c:wizardPage2 pageController="{!self}" rendered="{!pageNumber=2}" />
+            <apex:pageBlockButtons >
+            	<apex:commandButton action="{!nextPage}" value="Next" rendered="{!pageNumber<2}" />
+            	<apex:commandButton action="{!prevPage}" value="Prev" rendered="{!pageNumber>1}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
