@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Simple Calculator" icon-name="standard:formula">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+                <lightning-input type="number" name="firstNumber" onchange={numberchangeHandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-input type="number" name="secondNumber" onchange={numberchangeHandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-button label="Add" icon-name="utility:add" onclick={addHandler}></lightning-button>
+                <lightning-button label="Substract" icon-name="utility:dash" onclick={subHandler}></lightning-button>
+                <lightning-button label="Multiply" icon-name="utility:close" onclick={multiplyHandler}>
+                </lightning-button>
+                <lightning-button label="Divide" icon-name="utility:magicwand" onclick={divisionHandler}>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-formatted-text value={currentResult}></lightning-formatted-text>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-input type="checkbox" onchange={showPreviosToggel}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <template if:true={showResult}>
+                    <ul>
+                        <template iterator:result={previousResult}>
+                            <li key={result.value}>
+                                <div>
+                                    <lightning-formatted-text value={result.value}></lightning-formatted-text>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
